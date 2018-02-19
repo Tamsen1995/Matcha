@@ -1,19 +1,22 @@
-const CreateUser = document.querySelector('.CreateUser')
+const CreateUser = document.querySelector('.CreateUser');
 CreateUser.addEventListener('submit', (e) => {
-	e.preventDefault()
-	console.log(CreateUser)
-	const username = CreateUser.querySelector('.username').value
-	const password = CreateUser.querySelector('.password').value
-	post('/createUser', { username, password })
-})
+	e.preventDefault();
+	const username = CreateUser.querySelector('.username').value;
+	const password = CreateUser.querySelector('.password').value;
+	post('/createUser', {username, password});
+});
 
-function post(path, data) {
-	return window.fetch(path, {
+function post(url, data) {
+	return fetch(url, {
+	  body: JSON.stringify(data),
+	  cache: 'no-cache',
+	  credentials: 'same-origin',
+	  headers: {
+		'content-type': 'application/json',
+	  },
 		method: 'POST',
-		header: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(data)
+	  mode: 'cors',
+	  redirect: 'follow',
+	  referrer: 'no-referrer',
 	})
 }

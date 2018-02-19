@@ -1,19 +1,22 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const store = require('./store')
+const express = require('express');
+const bodyParser = require('body-parser');
 
-const app = express()
+const store = require('./store');
 
-app.use(express.static('public'))
-app.use(bodyParser.json())
+const app = express();
+app.use(express.static('public'));
+app.use(bodyParser.json());
 app.post('/createUser', (req, res) => {
+	console.log(req);
+
 	store
 		.createUser({
 			username: req.body.username,
-			password: req.body.password
+			password: req.body.password,
 		})
-		.then(() => res.sendStatus(200))
-})
+		.then(() => res.sendStatus(200));
+});
+
 app.listen(7555, () => {
-	console.log('Server running on http://localhost:7555')
-})
+	console.log('Server running on http://localhost:7555');
+});
