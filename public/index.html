@@ -6,25 +6,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+	<link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css" />
 </head>
 
+<!-- Navigation bar -->
+
 <body>
-	<form class="Login">
-		<h1>Login</h1>
-		<input type="text" class="username" placeholder="username">
-		<input type="password" class="password" placeholder="password">
-		<input type="submit" value="Login">
-	</form>
+	<nav>
+		<ul>
+			<li>
+				<a href="/signup.html">Sign up</a>
+			</li>
+			<li>
+				<a href="#">Menu</a>
+			</li>
+			<li>
+				<a href="#">Links</a>
+			</li>
+		</ul>
+	</nav>
 
-	<form class="CreateUser">
-		<h1>Create a new user</h1>
+	<!-- Login form -->
+	<div class="jumbotron">
+		<div class="container">
+			<form class="Login">
+				<h1>Login</h1>
+				<input type="text" class="username" placeholder="username">
+				<input type="password" class="password" placeholder="password">
+				<input class="btn btn-default" type="submit" value="Login">
+			</form>
+		</div>
+	</div>
 
-		<input type="text" class="username" placeholder="username">
-		<input type="password" class="password" placeholder="password">
-		<input type="submit" value="Create user">
-	</form>
-	<script src="/app.js"></script>
+	<script src="/src/app.js"></script>
+	<script src="/src/login.js"></script>
+
 </body>
 
 </html>

@@ -7,8 +7,6 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.post('/createUser', (req, res) => {
-	console.log(req);
-
 	store
 		.createUser({
 			username: req.body.username,
