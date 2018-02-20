@@ -6,42 +6,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="/bootstrap.css" />
 
-
-
-
-	<!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-	<script src="main.js"></script> -->
 </head>
 
 <body>
 
 	<!-- Navigation bar -->
-	<nav>
-		<ul>
-			<li>
-				<a href="#">Navigation</a>
-			</li>
-			<li>
-				<a href="#">Menu</a>
-			</li>
-			<li>
-				<a href="#">Links</a>
-			</li>
-		</ul>
-	</nav>
 
-	<!-- signup form -->
-	<form class="CreateUser">
-		<h1>Create a new user</h1>
-		<input type="text" class="username" placeholder="username">
-		<input type="password" class="password" placeholder="password">
-		<input class="btn btn-default" type="submit" value="Create user">
-	</form>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">Home</a>
 
-	<script src="/helpers/post.js"></script>
-	<script src="/signup/signup.js"></script>
+				</li>
+				<li>
+					<a href="/login/login.html">Login</a>
+				</li>
+				<li>
+					<a href="/signup/signup.html">Signup</a>
+				</li>
+			</ul>
+		</nav>
 
-</body>
+		<!-- signup form -->
+		<form class="CreateUser">
+			<h1>Create a new user</h1>
+			<input type="text" class="username" placeholder="username">
+			<input type="password" class="password" placeholder="password">
+			<input class="btn btn-default" type="submit" value="Create user">
+		</form>
+
+		<script src="/helpers/post.js"></script>
+		<script src="/signup/signup.js"></script>
+
+	</body>
 
 </html>
